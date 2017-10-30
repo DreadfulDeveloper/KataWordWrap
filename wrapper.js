@@ -18,7 +18,7 @@ Wrapper.prototype.wrap = function(str, colLen) {
     while(colIdx < tempStr.length) {
       var idx = colIdx;
       var inWordBoundry = false;
-      while (tempStr[idx] !== ' ' && idx > 0) {
+      while (tempStr[idx] !== ' ' && ((colIdx - idx) <= colLen)) {
         idx--;
       }
 
